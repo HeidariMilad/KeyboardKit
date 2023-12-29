@@ -85,6 +85,7 @@ public extension KeyboardLocale {
         case .uzbek: return "🇺🇿"
         case .thai: return "🇹🇭"
         case .bangla: return "🇧🇩"
+        case .hangul: return "🇰🇷"
         }
     }
 }
