@@ -83,6 +83,7 @@ public extension KeyboardLocale {
         case .turkish: return "🇹🇷"
         case .ukrainian: return "🇺🇦"
         case .uzbek: return "🇺🇿"
+        case .thai: return "🇹🇭"
         }
     }
 }
