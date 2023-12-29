@@ -77,7 +77,11 @@ class KeyboardLocale_FlagTests: XCTestCase {
             .swahili: "🇰🇪",
             .turkish: "🇹🇷",
             .ukrainian: "🇺🇦",
-            .uzbek: "🇺🇿"
+            .uzbek: "🇺🇿",
+            .thai: "🇹🇭",
+            .bangla: "🇧🇩",
+            .hangul: "🇰🇷"
+                
         ]
 
         XCTAssertEqual(result.keys, expected.keys)

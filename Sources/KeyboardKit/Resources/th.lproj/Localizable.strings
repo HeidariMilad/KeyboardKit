@@ -1,0 +1,30 @@
+/*
+ Localizable.strings
+ KeyboardKit
+ 
+ Created by Daniel Saidi on 2022-12-31.
+ Copyright © 2022 Daniel Saidi. All rights reserved.
+ */
+
+"locale" = "th";
+
+"continue" = "ดำเนินการต่อ";
+"done" = "เสร็จแล้ว";
+"emergencyCall" = "โทรฉุกเฉิน";
+"go" = "ไป";
+"join" = "เข้าร่วม";
+"next" = "ถัดไป";
+"ok" = "ตกลง";
+"return" = "⮐";
+"route" = "เส้นทาง";
+"search" = "ค้นหา";
+"send" = "ส่ง";
+"space" = "ช่องว่าง";
+"switcherAlphabetic" = "ABC";
+"switcherNumeric" = "123";
+"switcherSymbolic" = "#+=";
+
+/**
+ For emojis localization, copy the text in `Emojis.md`, then
+ replace this comment with it and translate the keys.
+ */

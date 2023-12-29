@@ -1,0 +1,30 @@
+/*
+ Localizable.strings
+ KeyboardKit
+ 
+ Created by Daniel Saidi on 2022-01-03.
+ Copyright © 2022 Daniel Saidi. All rights reserved.
+ */
+
+"locale" = "ko";
+
+"continue" = "계속하다";
+"done" = "완료";
+"emergencyCall" = "응급 전화";
+"go" = "가다";
+"join" = "가입하다";
+"next" = "다음";
+"ok" = "확인";
+"return" = "↳";
+"route" = "노선";
+"search" = "검색";
+"send" = "보내다";
+"space" = "공백";
+"switcherAlphabetic" = "가나다";
+"switcherNumeric" = "123";
+"switcherSymbolic" = "#+=";
+
+/**
+ For emojis localization, copy the text in `Emojis.md`, then
+ replace this comment with it and translate the keys.
+ */
