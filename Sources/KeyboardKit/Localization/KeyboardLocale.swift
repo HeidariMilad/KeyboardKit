@@ -92,6 +92,7 @@ public enum KeyboardLocale: String,
     case ukrainian = "uk"
     case uzbek = "uz"
     case thai = "th"
+    case bangla = "bn"
 }
 
 public extension KeyboardLocale {
@@ -183,6 +184,7 @@ public extension KeyboardLocale {
         case .ukrainian: return "ukrainian"
         case .uzbek: return "uzbek"
         case .thai: return "thai"
+        case .bangla: return "bangla"
         }
     }
 

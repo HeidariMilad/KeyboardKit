@@ -164,7 +164,8 @@ class KeyboardLocale_DirectionTests: XCTestCase {
             .turkish: (true, false),
             .ukrainian: (true, false),
             .uzbek: (true, false),
-            .thai: (true, false)
+            .thai: (true, false),
+            .bangla: (true, false)
         ]
 
         XCTAssertEqual(result.keys, expected.keys)

@@ -98,7 +98,8 @@ class Locale_NameTests: XCTestCase {
             .turkish: "Türkçe",
             .ukrainian: "українська",
             .uzbek: "o‘zbek",
-            .thai: "ไทย"
+            .thai: "ไทย",
+            .bangla: "বাংলা"
         ]
 
         XCTAssertEqual(result.keys, expected.keys)
