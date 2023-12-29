@@ -24,22 +24,37 @@ public extension KeyboardButton {
          - Parameters:
            - text: The text to display.
            - action: The action bound to the button.
+           - smallCharacter: The small character to display at the top right.
          */
         public init(
             text: String,
-            action: KeyboardAction
+            action: KeyboardAction,
+            smallCharacter: String = ""
         ) {
             self.text = text
             self.isInputAction = action.isInputAction
+            self.smallCharacter = smallCharacter
+            self.action = action
         }
         
         private let text: String
         private let isInputAction: Bool
+        private let smallCharacter: String
+        private let action: KeyboardAction?
         
         public var body: some View {
-            Text(text)
-                .lineLimit(1)
-                .offset(y: useNegativeOffset ? -2 : 0)
+            
+            ZStack(alignment: .topTrailing) {
+                Text(text)
+                    .lineLimit(1)
+                    .offset(y: useNegativeOffset ? -2 : 0)
+                if action?.isCharacterAction == true {
+                    Text(smallCharacter)
+                        .font(.system(size: 9))
+                        .offset(x: 6, y: -6)
+                }
+            }
+            
         }
     }
 }

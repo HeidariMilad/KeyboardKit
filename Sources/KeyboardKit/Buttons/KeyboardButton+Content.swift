@@ -81,7 +81,8 @@ private extension KeyboardButton.Content {
     func textView(for action: KeyboardAction, text: String) -> some View {
         KeyboardButton.Title(
             text: text,
-            action: action
+            action: action,
+            smallCharacter: smallCharacter
         )
         .minimumScaleFactor(0.5)
         .padding(.bottom, styleProvider.buttonContentBottomMargin(for: action))
@@ -100,6 +101,9 @@ private extension KeyboardButton.Content {
     
     var spaceText: String {
         styleProvider.buttonText(for: action) ?? ""
+    }
+    var smallCharacter: String {
+        styleProvider.smallCharacter(for: action) ?? ""
     }
 }
 

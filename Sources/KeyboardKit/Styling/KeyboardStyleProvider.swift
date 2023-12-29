@@ -55,6 +55,9 @@ public protocol KeyboardStyleProvider: AnyObject {
     
     /// The button text to use for a certain action.
     func buttonText(for action: KeyboardAction) -> String?
+    
+    /// the smallCharacter for keyboard Button from action call outs
+    func smallCharacter(for action: KeyboardAction) -> String?
 
 
     // MARK: - Callouts

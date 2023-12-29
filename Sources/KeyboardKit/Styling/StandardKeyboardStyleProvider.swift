@@ -133,6 +133,10 @@ open class StandardKeyboardStyleProvider: KeyboardStyleProvider {
         action.standardButtonText(for: keyboardContext)
     }
 
+    /// The button small character in corner to use for a certain action, if any.
+    open func smallCharacter(for action: KeyboardAction) -> String? {
+        return nil
+    }
 
     // MARK: - Callouts
 
