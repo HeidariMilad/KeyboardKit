@@ -94,7 +94,7 @@ private extension View {
         context: KeyboardContext
     ) -> Bool {
         switch action {
-        case .nextLocale: return false
+        case .nextLocale: return true
         case .space: return context.spaceLongPressBehavior == .openLocaleContextMenu
         default: return false
         }
