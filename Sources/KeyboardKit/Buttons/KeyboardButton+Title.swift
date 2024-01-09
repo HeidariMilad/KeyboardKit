@@ -51,7 +51,7 @@ public extension KeyboardButton {
                 if action?.isCharacterAction == true {
                     Text(smallCharacter)
                         .font(.system(size: smallCharacter == "☺︎" ? 22 : 9))
-                        .offset(x: smallCharacter == "☺︎" ? 0 : 6, y: -6)
+                        .offset(x: smallCharacter == "☺︎" ? 4 : 6, y: -6)
                 }
             }
             
