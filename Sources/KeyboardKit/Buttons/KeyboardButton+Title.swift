@@ -51,10 +51,28 @@ public extension KeyboardButton {
                 if action?.isCharacterAction == true {
                     Text(smallCharacter)
                         .font(.system(size: smallCharacter == "☺︎" ? 22 : 9))
-                        .offset(x: smallCharacter == "☺︎" ? 4 : 6, y: -6)
+                        .offset(x: getOffset.x, y: getOffset.y)
                 }
             }
             
+        }
+    }
+}
+private extension KeyboardButton.Title {
+    
+    var defaultOffset: CGPoint {
+        return CGPoint(x: 6, y: -6)
+    }
+    var getOffset: CGPoint {
+        switch smallCharacter {
+        case "☺︎":
+            return CGPoint(x: 4, y: defaultOffset.y)
+        case "/":
+            return CGPoint(x: 3, y: -7)
+        case ":", ";", "'", "\"":
+            return CGPoint(x: 3, y: defaultOffset.y)
+        default:
+            return defaultOffset
         }
     }
 }
