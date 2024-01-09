@@ -50,7 +50,7 @@ public extension KeyboardButton {
                     .offset(y: useNegativeOffset ? -2 : 0)
                 if action?.isCharacterAction == true {
                     Text(smallCharacter)
-                        .font(.system(size: 9))
+                        .font(.system(size: smallCharacter == "☺︎" ? 18 : 9))
                         .offset(x: 6, y: -6)
                 }
             }
