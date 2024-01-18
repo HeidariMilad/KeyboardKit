@@ -135,6 +135,14 @@ public extension KeyboardAction {
         default: return false
         }
     }
+    
+    /// Whether or not the action is a custom action.
+    var isCustomAction: Bool {
+        switch self {
+        case .custom: return true
+        default: return false
+        }
+    }
 
     /// Whether or not the action is an emoji action.
     var isEmojiAction: Bool {

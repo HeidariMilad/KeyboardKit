@@ -47,11 +47,11 @@ public extension KeyboardButton {
             ZStack(alignment: .topTrailing) {
                 Text(text)
                     .lineLimit(1)
-                    .offset(y: useNegativeOffset ? -2 : 0)
-                if action?.isCharacterAction == true {
+                    .offset(x: getTextOffset.x, y: getTextOffset.y)
+                if action?.isCharacterAction == true || action?.isCustomAction == true {
                     Text(smallCharacter)
                         .font(.system(size: smallCharacter == "☺︎" ? 22 : 9))
-                        .offset(x: getOffset.x, y: getOffset.y)
+                        .offset(x: getSmallCharOffset.x, y: getSmallCharOffset.y)
                 }
             }
             
@@ -60,19 +60,35 @@ public extension KeyboardButton {
 }
 private extension KeyboardButton.Title {
     
-    var defaultOffset: CGPoint {
+    var defaultSmallCharOffset: CGPoint {
         return CGPoint(x: 6, y: -6)
     }
-    var getOffset: CGPoint {
+    var defaultTextOffset: CGPoint {
+        return CGPoint(x: 0, y: useNegativeOffset ? -2 : 0)
+    }
+    
+    var getTextOffset: CGPoint {
+        if action?.isCustomAction == true {
+            return CGPoint(x: -5, y: defaultTextOffset.y)
+        }
+        switch text {
+        default:
+            return defaultTextOffset
+        }
+    }
+    var getSmallCharOffset: CGPoint {
+        if action?.isCustomAction == true {
+            return CGPoint(x: defaultSmallCharOffset.x - 7, y: defaultSmallCharOffset.y)
+        }
         switch smallCharacter {
         case "☺︎":
-            return CGPoint(x: 4, y: defaultOffset.y)
+            return CGPoint(x: 4, y: defaultSmallCharOffset.y)
         case "/":
             return CGPoint(x: 3, y: -7)
         case ":", ";", "'", "\"":
-            return CGPoint(x: 3, y: defaultOffset.y)
+            return CGPoint(x: 3, y: defaultSmallCharOffset.y)
         default:
-            return defaultOffset
+            return defaultSmallCharOffset
         }
     }
 }
@@ -88,10 +104,10 @@ struct KeyboardButton_Title_Previews: PreviewProvider {
     
     static var previews: some View {
         HStack {
-            KeyboardButton.Title(text: "PasCal", action: .space)
-            KeyboardButton.Title(text: "UPPER", action: .space)
-            KeyboardButton.Title(text: "lower", action: .space)
-            KeyboardButton.Title(text: "non-input", action: .backspace)
+            KeyboardButton.Title(text: ".", action: .character(""),smallCharacter: "☺︎")
+            KeyboardButton.Title(text: ".", action: .custom(named: "d"),smallCharacter: "☺︎")
+            KeyboardButton.Title(text: ".", action: .character(""),smallCharacter: "☺︎")
+           
         }
     }
 }
