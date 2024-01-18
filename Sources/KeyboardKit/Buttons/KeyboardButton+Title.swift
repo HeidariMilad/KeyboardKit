@@ -68,9 +68,9 @@ private extension KeyboardButton.Title {
     }
     
     var getTextOffset: CGPoint {
-        if action?.isCustomAction == true {
-            return CGPoint(x: -5, y: defaultTextOffset.y)
-        }
+//        if action?.isCustomAction == true {
+//            return CGPoint(x: 0, y: defaultTextOffset.y)
+//        }
         switch text {
         default:
             return defaultTextOffset
@@ -87,6 +87,8 @@ private extension KeyboardButton.Title {
             return CGPoint(x: 3, y: -7)
         case ":", ";", "'", "\"":
             return CGPoint(x: 3, y: defaultSmallCharOffset.y)
+        case "1", "2":
+            return CGPoint(x: 2, y: defaultSmallCharOffset.y)
         default:
             return defaultSmallCharOffset
         }
