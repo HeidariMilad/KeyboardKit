@@ -83,8 +83,8 @@ private extension KeyboardButton.Title {
         switch smallCharacter {
         case "☺︎":
             return CGPoint(x: 4, y: defaultSmallCharOffset.y)
-        case ".":
-            return CGPoint(x: 4, y: defaultSmallCharOffset.y)
+        case "?", "!":
+            return CGPoint(x: 0, y: defaultSmallCharOffset.y)
         case "/":
             return CGPoint(x: 3, y: -7)
         case ":", ";", "'", "\"":
